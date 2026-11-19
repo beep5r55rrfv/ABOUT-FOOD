@@ -8,270 +8,154 @@
     <title>Магазин морозива</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            color: #402c3b;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        background: #fff8f5;
+        color: #443344;
+    }
 
-        /* Шапка */
-        header {
-            background: #f8b5c1;
-            padding: 20px 30px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
+    /* Шапка */
+    header {
+        background: #f8b5c1;
+        padding: 25px;
+        text-align: center;
+    }
 
-        header > a img {
-            width: 100px;
-        }
+    nav {
+        background: #fff4df;
+        padding: 15px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
 
-        nav ul {
-            list-style: none;
-            background: #fff4df;
-            padding: 15px 25px;
-            border-radius: 30px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
+    nav a {
+        text-decoration: none;
+        color: #59404b;
+        font-weight: bold;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #59404b;
-            font-weight: bold;
-        }
+    /* Головний екран */
+    .hero {
+        background: #f6b4c2;
+        padding: 90px 40px;
+        text-align: center;
+        border-radius: 0 0 50px 50px;
+    }
 
-        nav a:hover {
-            color: #e46d8b;
-        }
+    .hero h1 {
+        font-size: 48px;
+        color: #402c3b;
+        margin-bottom: 20px;
+    }
 
-        .header-icons {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            list-style: none;
-        }
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
 
-        .header-icons img {
-            width: 30px;
-        }
+    /* Кнопки */
+    button {
+        background: #ffe16a;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
 
-        /* Головний екран */
-        .hero {
-            background: #f6b4c2;
-            padding: 90px 40px;
-            text-align: center;
-            border-radius: 0 0 50px 50px;
-        }
+    button:hover {
+        background: #ffc94d;
+        transform: scale(1.05);
+    }
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
+    /* Про нас */
+    .about {
+        padding: 65px 30px;
+        text-align: center;
+        background: #fffdf7;
+    }
 
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
+    .about h2,
+    .products h2 {
+        font-size: 34px;
+        margin-bottom: 25px;
+    }
 
-        .hero img {
-            max-width: 100%;
-            width: 450px;
-            margin-top: 30px;
-        }
+    /* Асортимент */
+    .products {
+        background: #f8c4cf;
+        padding: 60px 25px;
+        text-align: center;
+    }
 
-        /* Кнопки */
-        button {
-            background: #ffe16a;
-            border: none;
-            padding: 14px 28px;
-            border-radius: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    .product-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
 
-        button:hover {
-            background: #ffc94d;
-            transform: scale(1.05);
-        }
+    .product-card {
+        background: #fffaf5;
+        width: 260px;
+        padding: 20px;
+        border-radius: 18px;
+        box-shadow: 0 5px 15px #bd899955;
+        transition: 0.3s;
+    }
 
-        /* Про нас */
-        .about {
-            padding: 65px 30px;
-            text-align: center;
-            background: #fffdf7;
-        }
+    .product-card:hover {
+        transform: translateY(-8px);
+    }
 
-        .about h2,
-        .products h2,
-        .flavors h2 {
-            font-size: 34px;
-            margin-bottom: 25px;
-        }
+    .product-card img {
+        width: 100%;
+        border-radius: 15px;
+    }
 
-        .about p {
-            max-width: 750px;
-            margin: 20px auto;
-            line-height: 1.7;
-        }
+    .product-card h3 {
+        margin: 15px;
+        color: #624454;
+    }
 
-        .about img {
-            max-width: 100%;
-            width: 300px;
-            margin: 15px;
-        }
+    /* Смаки */
+    .flavors {
+        padding: 70px 30px;
+        text-align: center;
+        background: #fffdf7;
+    }
 
-        /* Асортимент */
-        .products {
-            background: #f8c4cf;
-            padding: 60px 25px;
-            text-align: center;
-        }
+    /* Відгуки */
+    .reviews {
+        background: #f8c4cf;
+        padding: 60px 25px;
+        text-align: center;
+    }
 
-        .product-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            list-style: none;
-        }
+    .review-card {
+        background: white;
+        padding: 20px;
+        margin: 15px auto;
+        max-width: 500px;
+        border-radius: 18px;
+    }
 
-        .product-card {
-            background: #fffaf5;
-            width: 260px;
-            padding: 20px;
-            border-radius: 18px;
-            box-shadow: 0 5px 15px #bd899955;
-            transition: 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .product-card > img {
-            width: 100%;
-            height: 170px;
-            object-fit: contain;
-        }
-
-        .product-card h3 {
-            margin: 15px;
-            color: #624454;
-        }
-
-        .product-card p {
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        .product-card button img {
-            width: 25px;
-            height: 25px;
-            object-fit: contain;
-            vertical-align: middle;
-        }
-
-        /* Смаки */
-        .flavors {
-            padding: 70px 30px;
-            text-align: center;
-            background: #fffdf7;
-        }
-
-        .flavors p {
-            max-width: 700px;
-            margin: 20px auto;
-            line-height: 1.7;
-        }
-
-        .flavors > img {
-            max-width: 100%;
-            margin: 15px;
-        }
-
-        .flavor-buttons {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        /* Контакти */
-        .contact {
-            background: #f8c4cf;
-            padding: 60px 25px;
-            text-align: center;
-        }
-
-        .contact form {
-            margin-bottom: 30px;
-        }
-
-        .contact input {
-            padding: 14px;
-            border: 1px solid #ddd;
-            border-radius: 20px;
-            max-width: 100%;
-        }
-
-        .socials {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .socials img {
-            width: 35px;
-        }
-
-        /* Підвал */
-        footer {
-            background: #ffdf68;
-            padding: 35px;
-            text-align: center;
-            color: #493b30;
-        }
-
-        /* Адаптація */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-            }
-
-            nav ul {
-                gap: 15px;
-            }
-
-            .hero {
-                padding: 60px 20px;
-            }
-
-            .hero h1 {
-                font-size: 34px;
-            }
-
-            .about h2,
-            .products h2,
-            .flavors h2 {
-                font-size: 28px;
-            }
-        }
+    /* Підвал */
+    footer {
+        background: #ffdf68;
+        padding: 35px;
+        text-align: center;
+        color: #493b30;
+    }
     </style>
 </head>
 
@@ -294,7 +178,7 @@
 
         <ul class="header-icons">
             <li>
-                <img src="img/shopping-cart 1.png" alt="Кошик">
+                <img src="img/shopping-cart%201.png" alt="Кошик">
             </li>
             <li>
                 <img src="img/Heart.png" alt="Обране">
@@ -317,7 +201,7 @@
 
             <button type="button">Дізнатись більше</button>
 
-            <img src="img/Untitled design (27) 1.png"
+            <img src="img/Untitled%20design%20%2827%29%201.png"
                  alt="Смачне морозиво">
         </section>
 
@@ -325,7 +209,7 @@
         <section class="about" id="about">
             <h2>Ми дбаємо про тебе!</h2>
 
-            <img src="img/Untitled design (6) 1.png"
+            <img src="img/Untitled%20design%20%286%29%201.png"
                  alt="Натуральне морозиво">
 
             <p>
@@ -335,7 +219,7 @@
                 Кожна порція містить любов та турботу наших майстрів.
             </p>
 
-            <img src="img/Untitled design (7) 1 (1).png"
+            <img src="img/Untitled%20design%20%287%29%201%20%281%29.png"
                  alt="Приготування морозива">
 
             <p>
@@ -360,12 +244,12 @@
             <ul class="product-container">
 
                 <li class="product-card">
-                    <img src="img/Untitled design (16) 1 (1).png"
+                    <img src="img/Untitleddesign(16)1(1).png"
                          alt="Вафельний ріжок">
 
                     <h3>Ріжок</h3>
 
-                    <img src="img/Untitled design (21) 1.png"
+                    <img src="img/Untitleddesign(21)1.png"
                          alt="Морозиво в ріжку">
 
                     <p>
@@ -374,17 +258,17 @@
                     </p>
 
                     <button type="button">
-                        <img src="img/Group 65.png" alt="Додати до кошика">
+                        <img src="img/Group65.png" alt="Додати до кошика">
                     </button>
                 </li>
 
                 <li class="product-card">
-                    <img src="img/Untitled design (13) 2 (1).png"
+                    <img src="img/Untitleddesign(13)2(1).png"
                          alt="Молочний коктейль">
 
                     <h3>Смузі</h3>
 
-                    <img src="img/Untitled design (19) 1.png"
+                    <img src="img/Untitleddesign(19)1.png"
                          alt="Смузі з морозивом">
 
                     <p>
@@ -393,17 +277,17 @@
                     </p>
 
                     <button type="button">
-                        <img src="img/Group 65.png" alt="Додати до кошика">
+                        <img src="img/Group65.png" alt="Додати до кошика">
                     </button>
                 </li>
 
                 <li class="product-card">
-                    <img src="img/Untitled design (11) 1 (1).png"
+                    <img src="img/Untitleddesign(11)1(1).png"
                          alt="Морозиво">
 
                     <h3>Морозиво</h3>
 
-                    <img src="img/Untitled design (18) 1.png"
+                    <img src="img/Untitleddesign(18)1.png"
                          alt="Морозиво в стаканчику">
 
                     <p>
@@ -412,7 +296,7 @@
                     </p>
 
                     <button type="button">
-                        <img src="img/Group 65.png" alt="Додати до кошика">
+                        <img src="img/Group65.png" alt="Додати до кошика">
                     </button>
                 </li>
 
@@ -422,11 +306,11 @@
         <!-- Смаки -->
         <section class="flavors" id="taste">
 
-            <img src="img/Group 63.png" alt="Декоративне зображення">
+            <img src="img/Group63.png" alt="Декоративне зображення">
 
             <h2>Небесні смаки</h2>
 
-            <img src="img/Group 56.png" alt="Різноманітні смаки морозива">
+            <img src="img/Group56.png" alt="Різноманітні смаки морозива">
 
             <p>
                 Відкрийте для себе унікальні комбінації смаків!
